@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Text, View, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import React, { useState} from 'react';
+import { Text, View, StyleSheet, TextInput, TouchableOpacity, Keyboard} from 'react-native';
 import { useDispatch } from 'react-redux';
 import { updateInput } from './redux/action';
 
 const EditNotes = () => {
   const [inputValue, setInputValue] = useState(''); // Initialize inputValue state with empty string
   const dispatch = useDispatch();
-  
   const handleSaveNotes = () => {
     if (inputValue.trim() !== '') {
       dispatch(updateInput(inputValue));
       setInputValue('');
+      Keyboard.dismiss(); // Dismiss the keyboard
       console.warn("Note Added")
     }
   };
