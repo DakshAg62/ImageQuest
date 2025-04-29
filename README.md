@@ -1,4 +1,3 @@
-ImageQuest
 ImageQuest is a React Native mobile application that allows users to search for images related to any keyword, such as "bike" or "nature," and displays relevant results fetched from an image API. The app features a clean, user-friendly interface with dynamic grid customization and pagination for seamless browsing.
 Features
 
